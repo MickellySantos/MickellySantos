@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Mooli', sans-serif;
+    justify-content: center;
+    background-color: beige;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+/* Inicio do Menu Hamburger*/
+.header-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 0 100px;
+    position: relative;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 400ms ease-in-out 0s;
+}
+
+.checkbox .trace {
+    width: 50px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50px;
+    transition: 0.5s ease-in-out;
+}
+
+.checkbox .trace:nth-child(1) {
+    top: 26px;
+    transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(2) {
+    top: 46px;
+    transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(3) {
+    top: 66px;
+    transform: rotate(0);
+}
+
+#toggle {
+    display: none;
+}
+/*Fim do Menu Hamburger*/
+
+/* Inicio do MENU */
+.menu {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    background-color: transparent;
+    height: 4px;
+    width: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 0px rgba(100, 241, 241, 0.322);
+    z-index: -1;
+    transition: 400ms ease-in-out 0s;
+}
+
+.menu-itens {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms ease-in-out 0s;
+}
+
+.menu-itens ul {
+    list-style-type: none;
+}
+
+.menu-itens ul li a {
+    margin: 10px 0;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 40px;
+}
+/*Fim do MENU */
+
+/*Inicio da Animação do MENU*/
+#toggle:checked + .checkbox .trace:nth-child(1) {
+    transform: rotate(45deg);
+    top: 47px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2) {
+    transform: translate(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 48px;
+}
+
+#toggle:checked + .checkbox {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+#toggle:checked ~ .menu {
+    box-shadow: 0px 75px 0px 99vmax rgb(255, 255, 255);
+    z-index: 1;
+}
+
+#toggle:checked ~ .menu-itens {
+    visibility: visible;
+    opacity: 1;
+}
+/*Fim da Animação do Menu*/
+
+/*Inicio da Apresentação*/
+.imagem {
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    float: right;
+}
+
+.imagem img {
+    border-radius: 15px;
+    margin-top: 0;
+}
+
+.nome {
+    margin-top: 110px;
+    margin-right: 30px;
+    margin-left: 30px;
+    font-size: 32px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(40, 48, 48, 0.534);
+    width: 500px;
+}
+
+.curriculo {
+    margin-top: 30px;
+    flex-direction: column;
+}
+
+.item a {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 22px;
+    padding-right: 10px;
+    width: 500;
+    height: 60px;
+    margin-bottom: 1px;
+    border-radius: 50px;
+    border: 2px solid rgba(100, 241, 241, 0.678);
+    color: black;
+    background: rgba(0, 0, 0, 0.322);
+    box-shadow: 0 5px 5px rgba(100, 241, 241, 0.151);
+    cursor: pointer;
+}
+
+.item:hover {
+    background: rgba(100, 241, 241, 0.678);
+    transition: 0.2s;
+
+}
+/*Fim da Apresentação*/
+
+/*Inicio da Animação das Redes Sociais*/
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.icones {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+    margin: 3px;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.icones i {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: rgba(0, 7, 0, 0.514);
+    color: rgba(100, 241, 241, 0.678);
+}
+
+.icones span a {
+    text-decoration: none;
+    float: right;
+    margin-right: 23px;
+    font-weight: 100;
+    font-size: 17px;
+    line-height: 35px;
+}
+
+.icones:hover {
+    width: 125px;
+    background-color: rgba(171, 241, 218, 0.87);
+    border-radius: 20px;
+}
+/*Fim da Animação das Redes Sociais*/
+
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    line-height: 23px;
+    padding: 1.5rem 2rem;
+    border-radius: 24px;
+    font-size: 16px;
+    margin-top: 35px;
+    margin-left: 200px;
+    width: 900px;
+    height: 300px;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.322);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.329);
+    cursor: pointer;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+    font-weight: 600;
+    color: rgba(40, 48, 48, 0.534);
+}
+
+/*Projetos*/
+.card-wrapper h2 {
+    color: rgba(0, 0, 0, 0.815);
+    font-size: 0px;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    transition: 0.5s ease-in-out;
+    visibility: visible;
+    opacity: 0;
+    font-weight: bold;
+}
+
+.card-wrapper p a {
+    font-size: 0px;
+    visibility: visible;
+    text-decoration: none;
+    opacity: 0;
+    font-weight: bold;
+    text-transform: none;
+    transition: 0.5s ease-in-out;
+}
+
+.container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 3rem 0;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+}
+
+.card-1 {
+    width: 130px;
+    padding: 130px;
+    border-radius: 100%;
+    margin: 3rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./img/cardapio.png);
+    background-color: rgba(255, 255, 255, 0.514);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(0.5);
+    color: rgb(25, 0, 255);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.card-2 {
+    width: 130px;
+    padding: 130px;
+    border-radius: 100%;
+    margin: 1rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./img/mulherinspiradora.png);
+    background-color: rgba(255, 255, 255, 0.514);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(0.5);
+    color: rgb(25, 0, 255);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.card-3 {
+    width: 130px;
+    padding: 130px;
+    border-radius: 100%;
+    margin: 1rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-image: url(./img/ods.png);
+    background-color: rgba(255, 255, 255, 0.514);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    filter: grayscale(0.5);
+    color: rgb(25, 0, 255);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.card-1:hover,
+.card-2:hover,
+.card-3:hover {
+    filter: unset;
+}
+
+.card-text {
+    width: 50%;
+    letter-spacing: 1px;
+    text-align: justify;
+}
+
+.card-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-wrapper::before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid rgb(47, 0, 255);
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.card-1:hover > .card-wrapper::before,
+.card-2:hover > .card-wrapper::before,
+.card-3:hover > .card-wrapper::before {
+    height: 200px;
+    width: 200px;
+    opacity: 1;
+}
+
+.card-1:hover > .card-wrapper p a,
+.card-2:hover > .card-wrapper p a,
+.card-3:hover > .card-wrapper p a {
+    opacity: 1;
+    visibility: visible;
+    font-size: 14px;
+}
+
+.card-1:hover > .card-wrapper h2,
+.card-2:hover > .card-wrapper h2,
+.card-3:hover > .card-wrapper h2 {
+    opacity: 1;
+    visibility: visible;
+    font-size: 31px;
+}
+
+.projetos {
+    margin-top: 40px;
+    flex-direction: column;
+    margin: auto;
+}
+/* Fim de Projetos*/
+
+/* Inicio do Formulário */
+.formulario {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.inicio {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 45px;
+    font-weight: 600;
+    color: rgba(40, 48, 48, 0.534);
+    line-height: 1.2;
+}
+
+.inicio::before {
+    content: "📧";
+    display: block;
+}
+
+.form {
+    width: 100%;
+    max-width: 32rem;
+    font-size: 1.125rem;
+}
+
+.form label,
+.form input,
+.form textarea,
+.form button {
+    display: block;
+    width: 100%;
+}
+
+.form label {
+    color: rgba(40, 48, 48, 0.534);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.form input,
+.form textarea {
+    font: inherit;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: border-color, box-shadow 0.2s;
+}
+
+.form textarea {
+    min-height: 13rem;
+    resize: vertical;
+}
+
+.form input:hover,
+.form input:focus,
+.form textarea:hover, 
+.form textarea:focus {
+    outline: none;
+    border-color: rgba(100, 241, 241, 0.678);
+    box-shadow: 0 0 0 3px rgba(100, 241, 241, 0.678);
+}
+
+.form button {
+    width: 540px;
+    display: block;
+    padding: 1rem;
+    box-shadow: 0 5px 5px rgba(100, 241, 241, 0.151);
+    background: rgba(0, 0, 0, 0.329);
+    color: rgb(0, 0, 0);
+    font: inherit;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.form button:hover,
+.form button:focus{
+    outline: none;
+    background: rgba(100, 241, 241, 0.678);
+}
+/*Fim do Formulário */
+
+footer {
+    font-size: 22px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin-top: 50px;
+    height: 20px;
+    width: 95%;
+    color: black;
+    background-color: rgba(100, 241, 241, 0.322);
+}
+
+@media all and (max-width: 768px) {
+    #menu {
+        visibility:visible;
+    }
+    .nome, .imagem {
+        display: block;
+        width: 80%;
+        padding: 0;
+        margin: 10px auto;
+        float: none;
+    }
+    .sobre {
+        display: block;
+        width: auto;
+        height: auto;
+        padding: auto;
+        margin: auto;
+    }
+
+    .redes-sociais {
+        padding: 10px;
+    }
+
+    .header-container {
+        margin-bottom: -1;
+        padding-bottom: -1;
+    }
+
+    .container{
+        width: auto;
+        padding: 35px;
+        margin: 0;
+        height: auto;
+    }
+
+    .card-container {
+        padding: auto;
+        height: auto;
+        width: auto;
+        margin: auto;
+    }
+}
