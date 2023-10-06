@@ -6,13 +6,14 @@
     <title>Portfólio</title>
     <link rel="stylesheet" href="estilo.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src= "./app.js"></script>
 </head>
 <body>
 <section>
     <header>
             <ul id="menu">
                 <div id="box" class="traco"><li><a href="#home">Home</a></li></div>
-                <div id="box" class="traco"><li><a href="#linguagens">linguagens</a></li></div>
+                <div id="box" class="traco"><li><a href="#linguagens">Linguagens</a></li></div>
                 <div id="box" class="traco"><li><a href="#projetos">Projetos</a></li></div>
                 <div id="box" class="traco"><li><a href="#formulario">Formulário</a></li></div>
             </ul>
@@ -81,7 +82,7 @@
         <main id="projetos" class="container">
             <div class="card-container">
                 <div class="card-1">
-                    <div class="card-wrapper">
+                    <div class="card-wrapper" id="title-div" onclick="sayHello()">
                         <h2>1º Projeto</h2>
                         <p>
                             <a href="https://mickellysantos.github.io/cardapioelasnatech/" target="_blank">Vem Ver</a>
@@ -143,7 +144,7 @@
                 <label for="name"><input id="Nome" type="text" name="name" placeholder="Nome" required></label>
                 <label for="email"><input id="Email" type="email" name="email" placeholder="Email" required></label>
                 <label for="message"><textarea id="message" name="message" placeholder="Escreva Aqui:" required></textarea>
-                <input type= "hidden" name="_next" value="https://mickellysantos.github.io/Obrigado.html"></label>
+                <input type= "hidden" name="_next" value="https://mickellysantos.github.io/MickellySantos/obrigado.html"></label>
                 <button type="submit">Enviar</button>
             </form>
         </div>
