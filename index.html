@@ -82,7 +82,7 @@
         <main id="projetos" class="container">
             <div class="card-container">
                 <div class="card-1">
-                    <div class="card-wrapper" id="title-div" onclick="sayHello()">
+                    <div class="card-wrapper">
                         <h2>1º Projeto</h2>
                         <p>
                             <a href="https://mickellysantos.github.io/cardapioelasnatech/" target="_blank">Vem Ver</a>
@@ -137,17 +137,17 @@
         </main>
     </section>
 
-    <section>
-        <div id="formulario" class="formulario">
-            <h1 class="inicio">Formulário de Contato</h1>
-            <form action= "https://formsubmit.co/mickelly2020.santos@gmail.com" method="post" class="form">
-                <label for="name"><input id="Nome" type="text" name="name" placeholder="Nome" required></label>
-                <label for="email"><input id="Email" type="email" name="email" placeholder="Email" required></label>
-                <label for="message"><textarea id="message" name="message" placeholder="Escreva Aqui:" required></textarea>
-                <input type= "hidden" name="_next" value="https://mickellysantos.github.io/MickellySantos/obrigado.html"></label>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
+<section>
+    <div id="formulario" class="formulario">
+        <h1 class="inicio">Formulário de Contato</h1>
+        <form action= "https://formsubmit.co/ajax/mickelly2020.santos@gmail.com" method="post" class="form" data-form>
+            <label for="name"><input id="Nome" type="text" name="name" placeholder="Nome" required></label>
+            <label for="email"><input id="Email" type="email" name="email" placeholder="Email" required></label>
+            <label for="message"><textarea id="message" name="message" placeholder="Escreva Aqui:" required></textarea>
+            <input type= "hidden" name="_next" value="https://mickellysantos.github.io/MickellySantos/obrigado.html"></label>
+            <button type="submit" data-button>Enviar</button>
+        </form>
+    </div>
 </section>
 
 <footer class="footer">

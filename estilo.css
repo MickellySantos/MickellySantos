@@ -447,14 +447,14 @@ h1 {
 .formulario {
     margin: 0;
     padding: 0;
+    place-items: center;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding: 1rem;
 }
 
 .inicio {
@@ -499,7 +499,7 @@ h1 {
     margin-bottom: 1rem;
     border: 1px solid transparent;
     border-radius: 8px;
-    transition: border-color, box-shadow 0.2s;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .form textarea {
@@ -529,16 +529,35 @@ h1 {
     background: rgba(0, 0, 0, 0.329);
     color: rgb(255, 255, 255);
     font: inherit;
+    font-weight: 700;
     border: none;
-    border-radius: 8px;
+    border-radius: 99px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 .form button:hover,
 .form button:focus{
     outline: none;
     background: rgba(100, 241, 241, 0.678);
+}
+
+.form button:disabled {
+    cursor: not-allowed;
+    background: rgba(53, 52, 52, 0.274);
+}
+
+.success, 
+.error {
+    text-align: center;
+}
+
+.success{
+    color: greenyellow;
+}
+
+.error {
+    color: tomato;
 }
 /*Fim do Formulário */
 
